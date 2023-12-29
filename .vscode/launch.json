@@ -1,0 +1,45 @@
+{
+//auth: mic
+//ver: 0.0.1
+//time: 2023-12-28 22:00:00
+    "version": "0.0.1",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'b4-rust-test'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=b4-rust-test",
+                    "--package=b4-rust-test"
+                ],
+                "filter": {
+                    "name": "b4-rust-test",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'b4-rust-test'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=b4-rust-test",
+                    "--package=b4-rust-test"
+                ],
+                "filter": {
+                    "name": "b4-rust-test",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
